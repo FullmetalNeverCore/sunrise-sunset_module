@@ -38,7 +38,6 @@ class SunData:
                 else:
                     print('Err - write city in latin alphabet'),os.execv(sys.argv[0], sys.argv)
     def main(self):
-        try:
             self.driver.get(self.url)
             def sunset():
                 time.sleep(4)
@@ -50,7 +49,6 @@ class SunData:
                 return sr
             print(sunset()),print(sunrise())
             self.driver.close()
-        except Exception:
-            sys.exit("END")
+
 
 SunData().main()
